@@ -4,7 +4,7 @@ import ProfileCardDetails from "./ProfileCardDetails";
 
 const ProfileCard = ({
   name,
-  socialTags = [{ icon: "Twitter", id: "id" }],
+  socialTags = [{ icon: "twitter", id: "id" }],
   avatar = "/avatar1.png",
 }) => {
   return (

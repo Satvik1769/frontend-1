@@ -380,3 +380,45 @@ h2 {
   border: 1px solid var(--light-bg);
   border-radius: 5px;
 }
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--border1, #3c4857);
+  background: var(--a_bg1, #212a33);
+  box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.15) inset,
+    0px 4px 10px 0px rgba(0, 0, 0, 0.15) inset,
+    0px -4px 10px 0px rgba(255, 255, 255, 0.02);
+  height: 55px;
+  width: 100%;
+  padding-left: 15px;
+  color: var(--text1);
+}
+
+.label {
+  color: var(--text, #99a8b8);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+}
+
+.chooseAvatarBtn {
+  display: flex;
+  /* width: 162.5px; */
+  height: 55px;
+  padding: 17px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--text, #99a8b8);
+  background: var(--a_bg2, #2a333e);
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+}

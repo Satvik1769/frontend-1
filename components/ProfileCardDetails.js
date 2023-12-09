@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ProfileCardDetails = ({
   name,
-  socialTags = [{ icon: "Twitter", id: "id" }],
+  socialTags = [{ icon: "twitter", id: "id" }],
   isDark = false,
 }) => {
   return (

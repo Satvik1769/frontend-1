@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const ImageBox = ({
   contHeight = 167,
@@ -13,10 +15,18 @@ const ImageBox = ({
   style,
   className,
   grad = 1,
+  onClick,
 }) => {
+  const router = useRouter();
   return (
-    <Link
-      href={href}
+    <button
+      onClick={(e) => {
+        if (href) {
+          router.push(href);
+          return;
+        }
+        onClick && onClick(e, grad);
+      }}
       style={style}
       className={`p-1 card hoverExpand w-[${contHeight.toString()}px] h-[${contWidth.toString()}px] fcc ${className}`}
     >
@@ -46,7 +56,7 @@ const ImageBox = ({
           <h3>{rightText}</h3>
         </div>
       )}
-    </Link>
+    </button>
   );
 };
 
