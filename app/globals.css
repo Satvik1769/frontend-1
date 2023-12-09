@@ -208,6 +208,35 @@ h1 {
   text-transform: uppercase;
 }
 
+.socialTag {
+  color: var(--bg1, #212a33);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+}
+
+.profileCardH {
+  color: var(--bg1, #212a33);
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 15px */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.visitProfileBtn {
+  color: var(--bg1, #212a33);
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
 p {
   color: var(--text, #99a8b8);
   font-family: Montserrat;
@@ -306,9 +335,48 @@ h2 {
   flex-shrink: 0;
 }
 
+.hover:hover {
+  cursor: pointer;
+}
+.hoverExpand:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: transform 0.4s ease-in-out;
+}
+.hoverColorChange:hover {
+  /* background-color: ; */
+}
+
 .bannerContainer {
   display: inline-flex;
-  padding: 17px 0px;
   flex-direction: column;
   align-items: flex-start;
+}
+
+/* Profile card */
+.profileCard {
+  border-radius: 0px 20px 20px 20px;
+  border: 1px solid var(--grad_border, #b1ff67);
+  background: linear-gradient(180deg, #e799ad 0%, #ee839e 100%);
+  box-shadow: 3px 3px 0px 0px #8c2f46;
+}
+
+.scrollbar {
+  overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar,
+.scrollbarHidden::-webkit-scrollbar {
+  height: 0px;
+}
+
+.scrollbar:hover::-webkit-scrollbar {
+  transition: heigth 2s ease;
+  height: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--bg);
+  border: 1px solid var(--light-bg);
+  border-radius: 5px;
 }

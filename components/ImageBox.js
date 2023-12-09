@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ImageBox = ({
   contHeight = 167,
   contWidth = 219,
+  href = "",
   leftText,
   src = "/avatar1.png",
   rightText,
@@ -13,9 +15,10 @@ const ImageBox = ({
   grad = 1,
 }) => {
   return (
-    <div
+    <Link
+      href={href}
       style={style}
-      className={`p-1 card w-[${contHeight.toString()}px] h-[${contWidth.toString()}px] fcc ${className}`}
+      className={`p-1 card hoverExpand w-[${contHeight.toString()}px] h-[${contWidth.toString()}px] fcc ${className}`}
     >
       <div
         className="flex"
@@ -35,13 +38,15 @@ const ImageBox = ({
           height={height || 500}
         />
       </div>
-      {leftText && rightText && (
-        <div className={`${rightText ? "frcsb w-full" : "frc"} h-full  px-2`}>
+      {(leftText || rightText) && (
+        <div
+          className={`${rightText ? "frcsb w-full" : "frc"} h-full  px-2 py-4`}
+        >
           <h3>{leftText}</h3>
           <h3>{rightText}</h3>
         </div>
       )}
-    </div>
+    </Link>
   );
 };
 
