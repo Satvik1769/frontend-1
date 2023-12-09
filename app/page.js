@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
+      <div className="mt-5" />
       <Banner />
     </>
   );

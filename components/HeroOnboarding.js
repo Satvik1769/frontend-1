@@ -147,7 +147,7 @@ const HeroOnboardingImages = () => {
   return (
     <>
       <div
-        className="frc gap-3 md:gap-5 md:max-w-[550px]  rotate-[8.7deg] md:translate-x-0 -translate-x-[20%]"
+        className="frc gap-3 md:gap-5 md:max-w-[550px]  rotate-[8.7deg] sm:translate-x-0 -translate-x-[20%]"
         style={
           {
             //   transform: "rotate(8.609deg) ",
@@ -168,7 +168,7 @@ const HeroOnboardingImages = () => {
               <ImageBox
                 {...img}
                 key={index}
-                className={` h-[219px] w-[168px] lg:h-auto lg:w-auto `}
+                className={` h-[219px] w-[168px] sm:h-[250px] sm:w-[250px] lg:h-auto lg:w-auto `}
               />
             ))}
           </div>
